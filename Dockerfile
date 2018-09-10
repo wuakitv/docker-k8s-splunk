@@ -15,7 +15,9 @@ RUN fluent-gem install fluent-plugin-kubernetes_metadata_filter
 # Fluentd Output filter plugin to rewrite tags that matches specified attribute.
 RUN fluent-gem install fluent-plugin-rewrite-tag-filter
 
-RUN gem install fluent-plugin-multi-format-parser 
+RUN gem install fluent-plugin-multi-format-parser
+
+RUN gem install fluent-plugin-systemd:0.3.0
 
 COPY td-agent.conf /etc/td-agent/td-agent.conf
 
