@@ -21,5 +21,7 @@ RUN gem install fluent-plugin-systemd:0.3.0
 
 COPY td-agent.conf /etc/td-agent/td-agent.conf
 
+RUN mkdir -p /run/log/journal
+
 # Run the Fluentd service.
 ENTRYPOINT ["fluentd" , "-c" , "/etc/td-agent/td-agent.conf"]
