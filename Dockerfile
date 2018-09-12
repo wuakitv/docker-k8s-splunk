@@ -32,5 +32,7 @@ RUN set -e \
 ENV LD_PRELOAD "/usr/lib/x86_64-linux-gnu/libjemalloc.so.1"
 COPY entrypoint.sh /fluentd/entrypoint.sh
 
+RUN chmod +x /fluentd/entrypoint.sh
+
 ENTRYPOINT ["/fluentd/entrypoint.sh"]
 CMD ["-h"]
