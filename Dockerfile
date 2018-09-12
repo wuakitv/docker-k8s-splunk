@@ -1,6 +1,6 @@
 FROM ruby:2.5.1-slim
 
-LABEL maintainer="Gimi Liang <zliang@splunk.com>"
+LABEL maintainer="Leonardo Damasceno <systems@wuaki.tv>"
 
 # skip runtime bundler installation
 ENV FLUENTD_DISABLE_BUNDLER_INJECTION 1
